@@ -1,4 +1,5 @@
 add_library(cufft_callbacks STATIC cufft_callbacks.cu)
+message(${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 target_include_directories(cufft_callbacks PUBLIC ${CMAKE_SOURCE_DIR}/include ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 target_compile_options(cufft_callbacks PRIVATE "-dc") # !!!! IMPORTANT !!!!
 target_link_libraries(cufft_callbacks
